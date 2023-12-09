@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
     "android": "expo start --android",
+    "format": "prettier --write .",
     "ios": "expo start --ios",
+    "start": "expo start",
     "web": "expo start --web"
   },
   "dependencies": {
@@ -15,7 +16,8 @@
     "react-native": "0.72.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "prettier": "3.1.0"
   },
   "private": true
 }

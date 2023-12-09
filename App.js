@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
   TextInput,
-} from "react-native";
+} from 'react-native';
 
 function shuffleLetters(str) {
   const arr = [...str];
@@ -13,11 +13,11 @@ function shuffleLetters(str) {
     const randomIndex = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[randomIndex]] = [arr[randomIndex], arr[i]];
   }
-  return arr.join("");
+  return arr.join('');
 }
 
 export default function App() {
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
   const [shuffled, setShuffled] = useState(null);
 
   const updateShuffled = () => {
@@ -25,7 +25,7 @@ export default function App() {
   };
 
   const resetInput = () => {
-    setInputText("");
+    setInputText('');
     setShuffled(null);
   };
 
@@ -54,22 +54,22 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f0f0f0",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#f0f0f0',
+    alignItems: 'center',
+    justifyContent: 'center',
     padding: 20,
   },
   header: {
     fontSize: 24,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginBottom: 20,
-    color: "#333",
+    color: '#333',
   },
   textInput: {
     height: 50,
-    width: "80%",
-    borderColor: "#007bff",
-    borderRadius: "10%",
+    width: '80%',
+    borderColor: '#007bff',
+    borderRadius: '10%',
     borderWidth: 1,
     marginBottom: 20,
     paddingHorizontal: 10,
@@ -77,21 +77,21 @@ const styles = StyleSheet.create({
   resultText: {
     fontSize: 20,
     fontWeight: 700,
-    color: "green",
+    color: 'green',
     marginTop: 10,
-    textAlign: "center",
+    textAlign: 'center',
   },
   button: {
-    alignItems: "center",
-    backgroundColor: "#007bff",
+    alignItems: 'center',
+    backgroundColor: '#007bff',
     borderRadius: 5,
-    justifyContent: "center",
+    justifyContent: 'center',
     marginTop: 20,
     padding: 10,
-    width: "40%",
+    width: '40%',
   },
   buttonText: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 16,
   },
 });
