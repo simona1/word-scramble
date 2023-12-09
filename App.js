@@ -7,10 +7,46 @@ import {
   TextInput,
 } from 'react-native';
 
+const words = [
+  'mystery',
+  'journey',
+  'harmony',
+  'whisper',
+  'freedom',
+  'galaxy',
+  'rainbow',
+  'puzzle',
+  'melody',
+  'lantern',
+  'eclipse',
+  'compass',
+  'diamond',
+  'serenade',
+  'twilight',
+  'sunshine',
+  'elephant',
+  'butterfly',
+  'chocolate',
+  'adventure',
+  'festival',
+  'cupcake',
+  'symphony',
+  'kaleidoscope',
+  'astronaut',
+  'waterfall',
+  'fireworks',
+  'reflection',
+  'celebration',
+];
+
+function getRandomIndex(index) {
+  return Math.floor(Math.random() * (index + 1));
+}
+
 function shuffleLetters(str) {
   const arr = [...str];
   for (let i = arr.length - 1; i > 0; --i) {
-    const randomIndex = Math.floor(Math.random() * (i + 1));
+    const randomIndex = getRandomIndex(i);
     [arr[i], arr[randomIndex]] = [arr[randomIndex], arr[i]];
   }
   return arr.join('');
